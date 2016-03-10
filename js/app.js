@@ -21,11 +21,8 @@ Enemy.prototype.update = function(dt) {
     } else {
         this.x += (this.speed + 100) * dt;
     }
-    if (player.x + 70 >= this.x && // player.right is_right_of enemy.left
-        player.x <= this.x + 70 && // player.left is_left_of enemy.right
-        player.y + 50 <= this.y + 100 && // player.top is_above enemy.bottom
-        player.y + 100 >= this.y + 50 // player.bottom is_below enemy.top
-    ) {
+    if (player.x + 70 >= this.x && player.x <= this.x + 70 && player.y + 50 <= this.y + 100 && player.y + 100 >= this.y + 50)
+    {
         player.resetPosition();
     }
 };
